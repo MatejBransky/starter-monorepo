@@ -1,4 +1,5 @@
 {
+	"license": "MIT",
   "scripts": {
 		"format": "lerna exec --stream --parallel -- prettier-eslint --write \"**/*.js\"",
     "clean": "lerna exec --stream --parallel -- rimraf build dist lib"
