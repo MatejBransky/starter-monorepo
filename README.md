@@ -8,6 +8,10 @@ Monorepo with support for multiple packages and one app.
 - HMR enabled
 - ESLint enabled
 - Prettier-Eslint enabled for `precommit`
+- testing with Jest
+- packages:
+  - they are bundled to the `cjs` with Rollup
+  - they are compiled to the `lib` folder with Babel
 
 ## Requirements
 
@@ -20,6 +24,20 @@ Monorepo with support for multiple packages and one app.
 
 ```
 $ yarn install
+```
+
+**Test:**
+
+Once:
+
+```
+$ yarn test
+```
+
+In watch mode:
+
+```
+$ yarn tdd
 ```
 
 **Start development:**
@@ -62,6 +80,7 @@ If you want some package dependencies to be external then include them in `pkg.p
 
 The app is built with [Parcel](https://parceljs.org/).
 Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli). They use shared config files `rollup.config.js` and `.babelrc` in the `packages` folder.
+Tests are runned with [Jest](https://facebook.github.io/jest/).
 
 ### Caveats
 
