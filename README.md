@@ -76,6 +76,20 @@ $ yarn build:app
 
 If you want some package dependencies to be external then include them in `pkg.peerDependencies`.
 
+**Install root dependencies:**
+
+```
+$ yarn add -D -W <package>
+```
+
+**Install package dependencies:**
+
+```
+$ lerna add [--scope] <package>
+```
+
+Or you can type all your deps in `package.json` and then run `yarn install`.
+
 ## Config
 
 The app is built with [Parcel](https://parceljs.org/).
