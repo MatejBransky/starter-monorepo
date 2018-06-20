@@ -16,7 +16,7 @@ Monorepo with support for multiple packages and one app.
 
 ## How to use
 
-**Instal dependencies**
+**Install dependencies**
 
 ```
 $ yarn install
@@ -61,10 +61,7 @@ If you want some package dependencies to be external then include them in `pkg.p
 ## Config
 
 The app is built with [Parcel](https://parceljs.org/).
-Packages are built with [Rollup](http://rollupjs.org) and they use single config file `rollup.config.js` in the `packages` folder.
-
-**Babel config (`.babelrc`)**
-_WIP_
+Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli). They use shared config files `rollup.config.js` and `.babelrc` in the `packages` folder.
 
 ### Caveats
 
