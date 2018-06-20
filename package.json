@@ -8,9 +8,10 @@
   "scripts": {
     "format": "lerna exec --stream --parallel -- prettier-eslint --write \"**/*.js\"",
     "clean:pkg": "lerna exec --stream --parallel --ignore app -- rimraf dist lib",
-    "build:pkg": "lerna exec --stream --parallel --ignore app -- rollup -c ../rollup.config.js",
+		"rollup:pkg": "lerna exec --stream --parallel --ignore app -- rollup -c ../rollup.config.js",
+		"build:pkg": "run-s clean:pkg rollup:pkg",
     "build:app": "cd app && npm run build",
-    "build": "run-s clean:pkg build:pkg build:app",
+    "build": "run-s build:pkg build:app",
     "start": "cd app && npm start"
   },
   "husky": {
@@ -27,7 +28,11 @@
       "prettier-eslint --write",
       "git add"
     ]
-  },
+	},
+	"engines": {
+		"node": ">=6",
+		"yarn": ">=1"
+	},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
