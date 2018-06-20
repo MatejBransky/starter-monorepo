@@ -55,3 +55,17 @@ $ yarn build:app
 3.  add `pkg.source` with the path to the source folder (uncompiled code) - this ensures that Parcel compiles symlinked modules in app with HMR support
 4.  add package as dependency to the app
 5.  start development with `yarn start`
+
+If you want some package dependencies to be external then include them in `pkg.peerDependencies`.
+
+## Config
+
+The app is built with [Parcel](https://parceljs.org/).
+Packages are built with [Rollup](http://rollupjs.org) and they use single config file `rollup.config.js` in the `packages` folder.
+
+**Babel config (`.babelrc`)**
+_WIP_
+
+### Caveats
+
+- don't use `app` as the package name (if you really want package with name `app` then update `--ignore` in npm scripts)
