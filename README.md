@@ -47,3 +47,11 @@ $ yarn build:pkg
 ```
 $ yarn build:app
 ```
+
+**Build a new package:**
+
+1.  create package folder in `packages/`
+2.  open command line in that folder and create `package.json` (`pkg` refers to its content) with `yarn init`
+3.  add `pkg.source` with the path to the source folder (uncompiled code) - this ensures that Parcel compiles symlinked modules in app with HMR support
+4.  add package as dependency to the app
+5.  start development with `yarn start`
