@@ -1,4 +1,6 @@
-import foo from 'foo';
+import React from 'react';
+import { render } from 'react-dom';
 
-const $root = document.getElementById('root');
-$root.textContent = foo();
+import App from './components/App';
+
+render(<App />, document.getElementById('root'));
