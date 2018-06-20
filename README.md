@@ -1,4 +1,4 @@
-# starter-lerna
+# starter-monorepo
 
 Monorepo with support for multiple packages and one app.
 
