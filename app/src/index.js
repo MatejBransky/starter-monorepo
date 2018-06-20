@@ -1,3 +1,4 @@
 import foo from 'foo';
 
-foo();
+const $root = document.getElementById('root');
+$root.textContent = foo();

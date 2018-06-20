@@ -1,6 +1,12 @@
 {
   "name": "foo",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "description": "",
+  "main": "dist/main.js",
+  "source": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matej Mazur",
   "license": "MIT"
 }

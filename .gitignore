@@ -3,6 +3,9 @@ build
 dist
 lib
 
+.cache
+
 lerna-debug.log
+package-lock.json
 yarn.lock
 yarn-error.log
