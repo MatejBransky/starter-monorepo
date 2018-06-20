@@ -70,7 +70,7 @@ $ yarn build:app
 
 1.  create package folder in `packages/`
 2.  open command line in that folder and create `package.json` (`pkg` refers to its content) with `yarn init`
-3.  add `pkg.source` with the path to the source folder (uncompiled code) - this 
+3.  add `pkg.source` with the path to the source folder (uncompiled code) - this
     ensures that [Parcel compiles symlinked modules in app with HMR support](https://github.com/parcel-bundler/parcel/pull/1101)
 4.  add package as dependency to the app
 5.  start development with `yarn start`
@@ -94,10 +94,13 @@ Or you can type all your deps in `package.json` and then run `yarn install`.
 ## Config
 
 The app is built with [Parcel](https://parceljs.org/).
-Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli). 
-They use shared config file `rollup.config.js` in the `packages` folder and each package has custom `.babelrc` 
+Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli).
+They use shared config file `rollup.config.js` in the `packages` folder and each package has custom `.babelrc`
 ([JSON5](https://github.com/json5/json5) format).
-Babel 6 doesn't support config in JS so you must include Babel settings in `<pkg>/.babelrc` and `rollup.config.js`.
+We need to set `modules: false` for `rollup-plugin-babel` 
+but, because it can't extend `.babelrc` and Babel 6 doesn't support config in JS, 
+you must include Babel settings twice 
+(once in `.babelrc` in package folder and once in `rollup.config.js`).
 Tests are runned with [Jest](https://facebook.github.io/jest/).
 
 ### Caveats
