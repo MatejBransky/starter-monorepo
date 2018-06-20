@@ -4,7 +4,7 @@ Monorepo with support for multiple packages and one app.
 
 ## Features
 
-- React with HMR support enabled 
+- React with HMR support enabled
 - ES6 support
 - ESLint enabled
 - Prettier-Eslint enabled for `precommit`
@@ -75,6 +75,20 @@ $ yarn build:app
 5.  start development with `yarn start`
 
 If you want some package dependencies to be external then include them in `pkg.peerDependencies`.
+
+**Install root dependencies:**
+
+```
+$ yarn add -D -W <package>
+```
+
+**Install package dependencies:**
+
+```
+$ lerna add [--scope] <package>
+```
+
+Or you can type all your deps in `package.json` and then run `yarn install`.
 
 ## Config
 
