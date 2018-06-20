@@ -8,8 +8,8 @@
   "scripts": {
     "format": "lerna exec --stream --parallel -- prettier-eslint --write \"**/*.js\"",
     "clean:pkg": "lerna exec --stream --parallel --ignore app -- rimraf dist lib",
-    "babel:pkg": "cross-env BABEL_ENV=babel lerna exec --stream --parallel --ignore app -- babel src --out-dir lib",
-    "rollup:pkg": "cross-env BABEL_ENV=rollup lerna exec --stream --parallel --ignore app -- rollup -c ../rollup.config.js",
+    "babel:pkg": "lerna exec --stream --parallel --ignore app -- babel src --out-dir lib",
+    "rollup:pkg": "lerna exec --stream --parallel --ignore app -- rollup -c ../rollup.config.js",
     "build:pkg": "run-s clean:pkg babel:pkg rollup:pkg",
     "build:app": "cd app && npm run build",
     "build": "run-s build:pkg build:app",
@@ -47,7 +47,6 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-react": "^7.9.1",

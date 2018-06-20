@@ -16,5 +16,19 @@ export default {
     }
   ],
   external: pkg.peerDependencies ? Object.keys(pkg.peerDependencies) : [],
-  plugins: [babel(), resolve(), commonjs()]
+  plugins: [
+    babel({
+      babelrc: false,
+      presets: [
+        [
+          'env',
+          { targets: { browsers: ['> 1%', 'last 2 versions'] }, modules: false }
+        ],
+        'react'
+      ],
+      plugins: ['external-helpers']
+    }),
+    resolve(),
+    commonjs()
+  ]
 };

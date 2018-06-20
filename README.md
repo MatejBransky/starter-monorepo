@@ -1,4 +1,4 @@
-# starter-lerna
+# starter-monorepo
 
 Monorepo with support for multiple packages and one app.
 
@@ -9,9 +9,9 @@ Monorepo with support for multiple packages and one app.
 - ESLint enabled
 - Prettier-Eslint enabled for `precommit`
 - testing with Jest
-- packages:
-  - they are bundled to the `cjs` with Rollup
-  - they are compiled to the `lib` folder with Babel
+- two outputs of packages:
+  - bundled to the `cjs` with Rollup
+  - compiled to the `lib` folder with Babel
 
 ## Requirements
 
@@ -70,7 +70,7 @@ $ yarn build:app
 
 1.  create package folder in `packages/`
 2.  open command line in that folder and create `package.json` (`pkg` refers to its content) with `yarn init`
-3.  add `pkg.source` with the path to the source folder (uncompiled code) - this ensures that Parcel compiles symlinked modules in app with HMR support
+3.  add `pkg.source` with the path to the source folder (uncompiled code) - this ensures that [Parcel compiles symlinked modules in app with HMR support](https://github.com/parcel-bundler/parcel/pull/1101)
 4.  add package as dependency to the app
 5.  start development with `yarn start`
 
@@ -93,7 +93,7 @@ Or you can type all your deps in `package.json` and then run `yarn install`.
 ## Config
 
 The app is built with [Parcel](https://parceljs.org/).
-Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli). They use shared config files `rollup.config.js` and `.babelrc` in the `packages` folder.
+Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli). They use shared config files `rollup.config.js` and `.babelrc` ([JSON5](https://github.com/json5/json5) format) in the `packages` folder.
 Tests are runned with [Jest](https://facebook.github.io/jest/).
 
 ### Caveats
