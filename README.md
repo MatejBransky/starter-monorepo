@@ -9,9 +9,9 @@ Monorepo with support for multiple packages and one app.
 - ESLint enabled
 - Prettier-Eslint enabled for `precommit`
 - testing with Jest
-- packages:
-  - they are bundled to the `cjs` with Rollup
-  - they are compiled to the `lib` folder with Babel
+- two outputs of packages:
+  - bundled to the `cjs` with Rollup
+  - compiled to the `lib` folder with Babel
 
 ## Requirements
 
