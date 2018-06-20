@@ -4,8 +4,8 @@ Monorepo with support for multiple packages and one app.
 
 ## Features
 
+- React with HMR support enabled 
 - ES6 support
-- HMR enabled
 - ESLint enabled
 - Prettier-Eslint enabled for `precommit`
 - testing with Jest
