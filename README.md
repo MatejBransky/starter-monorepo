@@ -10,7 +10,7 @@ Monorepo with support for multiple packages and one app.
 - Prettier-Eslint enabled for `precommit`
 - testing with Jest
 - two outputs of packages:
-  - bundled to the `cjs` with Rollup
+  - bundled to the `cjs` with Webpack
   - compiled to the `lib` folder with Babel
 
 ## Requirements
@@ -94,7 +94,7 @@ Or you can type all your deps in `package.json` and then run `yarn install`.
 ## Config
 
 The app is built with [Parcel](https://parceljs.org/).
-Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli).
+Packages are built with [Webpack](https://webpack.js.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli).
 They use shared config file `webpack.config.js` in the `packages` folder and each package has custom `.babelrc`
 ([JSON5](https://github.com/json5/json5) format).
 Tests are runned with [Jest](https://facebook.github.io/jest/).
