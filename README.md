@@ -75,7 +75,7 @@ $ yarn build:app
 4.  add package as dependency to the app
 5.  start development with `yarn start`
 
-If you want some package dependencies to be external then include them in `pkg.peerDependencies`.
+If you want some package dependencies to be external (CommonJS) then include them in `pkg.peerDependencies`.
 
 **Install root dependencies:**
 
@@ -95,14 +95,10 @@ Or you can type all your deps in `package.json` and then run `yarn install`.
 
 The app is built with [Parcel](https://parceljs.org/).
 Packages are built with [Rollup](http://rollupjs.org) and [Babel CLI](https://babeljs.io/docs/en/babel-cli).
-They use shared config file `rollup.config.js` in the `packages` folder and each package has custom `.babelrc`
+They use shared config file `webpack.config.js` in the `packages` folder and each package has custom `.babelrc`
 ([JSON5](https://github.com/json5/json5) format).
-We need to set `modules: false` for `rollup-plugin-babel` 
-but, because it can't extend `.babelrc` and Babel 6 doesn't support config in JS, 
-you must include Babel settings twice 
-(once in `.babelrc` in package folder and once in `rollup.config.js`).
 Tests are runned with [Jest](https://facebook.github.io/jest/).
 
 ### Caveats
 
-- don't use `app` as the package name (if you really want package with name `app` then update `--ignore` in npm scripts)
+- don't use `app` as the package name (if you really want package with name `app` then update `--ignore` in npm scripts and change name of app in `package.json`)
