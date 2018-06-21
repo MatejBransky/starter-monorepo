@@ -1,5 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Strong = ({ children }) => <strong>{children}</strong>;
+const Strong = ({ children, ...props }) => (
+  <strong {...props}>{children}</strong>
+);
 
 export default Strong;
