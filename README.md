@@ -7,7 +7,7 @@ Monorepo with support for multiple packages and one app.
 - [React](https://reactjs.org/) with [HMR](http://gaearon.github.io/react-hot-loader/) support enabled
 - [ES6](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) support
 - [ESLint](https://eslint.org/) enabled
-- [Prettier](https://prettier.io/)-Eslint enabled for `precommit`
+- [Prettier](https://prettier.io/)-[ESLint](https://eslint.org/) enabled for `precommit`
 - testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://github.com/kentcdodds/react-testing-library)
 - two outputs of packages:
   - bundled to the `cjs` with [Webpack](https://webpack.js.org/)
