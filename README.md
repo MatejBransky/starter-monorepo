@@ -4,19 +4,19 @@ Monorepo with support for multiple packages and one app.
 
 ## Features
 
-- React with HMR support enabled
-- ES6 support
-- ESLint enabled
-- Prettier-Eslint enabled for `precommit`
-- testing with Jest
+- [React](https://reactjs.org/) with [HMR](http://gaearon.github.io/react-hot-loader/) support enabled
+- [ES6](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) support
+- [ESLint](https://eslint.org/) enabled
+- [Prettier](https://prettier.io/)-Eslint enabled for `precommit`
+- testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://github.com/kentcdodds/react-testing-library)
 - two outputs of packages:
-  - bundled to the `cjs` with Webpack
-  - compiled to the `lib` folder with Babel
+  - bundled to the `cjs` with [Webpack](https://webpack.js.org/)
+  - compiled to the `lib` folder with [Babel](http://babeljs.io/)
 
 ## Requirements
 
-- Node.js >= 6
-- Yarn >= 1
+- [Node.js](http://nodejs.org/) >= 6
+- [Yarn](https://yarnpkg.com/lang/en/) >= 1
 
 ## How to use
 
@@ -75,7 +75,7 @@ $ yarn build:app
 4.  add package as dependency to the app
 5.  start development with `yarn start`
 
-If you want some package dependencies to be external (CommonJS) then include them in `pkg.peerDependencies`.
+If you want some package dependencies to be external ([CommonJS](https://requirejs.org/docs/commonjs.html)) then include them in `pkg.peerDependencies`.
 
 **Install root dependencies:**
 
