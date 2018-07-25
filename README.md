@@ -11,7 +11,7 @@ Monorepo with support for multiple packages and one app.
 - testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://github.com/kentcdodds/react-testing-library)
 - two outputs of packages:
   - bundled to the `cjs` with [Webpack](https://webpack.js.org/)
-  - compiled to the `lib` folder with [Babel](http://babeljs.io/)
+  - compiled to the `lib` folder with [Babel CLI](http://babeljs.io/docs/en/babel-cli)
 
 ## Requirements
 
