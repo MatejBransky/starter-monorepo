@@ -8,7 +8,9 @@
     "build": "parcel build src/index.html"
   },
   "dependencies": {
-    "foo": "^1.0.0"
+    "foo": "^1.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.9.2"

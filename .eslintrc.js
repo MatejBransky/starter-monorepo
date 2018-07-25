@@ -12,11 +12,13 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['jest'],
+  plugins: ['react', 'jest'],
   rules: {
     indent: ['error', 2, { SwitchCase: 1 }],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
-    semi: ['error', 'always']
+    semi: ['error', 'always'],
+    'react/jsx-uses-react': 2,
+    'react/jsx-uses-vars': 2
   }
 };

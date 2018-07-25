@@ -1,8 +1,6 @@
-import foo from 'foo';
+import React from 'react';
+import { render } from 'react-dom';
 
-const objA = { boo: 'Boo' };
-const objB = { ...objA };
-const { boo } = objB;
+import App from './components/App';
 
-const $root = document.getElementById('root');
-$root.textContent = foo({ str: boo });
+render(<App />, document.getElementById('root'));
